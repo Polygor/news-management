@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+        "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+        "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+
+<form-validation>
+    <formset>
+        <form name="NewsForm">
+            <field property="news.title" depends="required,maxlength,minlength,mask">
+
+                <msg name="required" key="err.news.title.required"/>
+                <msg name="maxlength" key="err.news.title.length"/>
+                <msg name="minlength" key="err.news.title.length"/>
+                <msg name="mask" key="err.news.title.invalid"/>
+
+                <arg name="maxlength" key="${var:minlength}" position="0" resource="false"/>
+                <arg name="maxlength" key="${var:maxlength}" position="1" resource="false"/>
+
+                <arg name="minlength" key="${var:minlength}" position="0" resource="false"/>
+                <arg name="minlength" key="${var:maxlength}" position="1" resource="false"/>
+
+                <var>
+                    <var-name>minlength</var-name>
+                    <var-value>5</var-value>
+                </var>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>100</var-value>
+                </var>
+
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>[A-zА-яЁё0-9\.\,\!\?\ \\/\(\)\+\-\*\=]</var-value>
+                </var>
+
+            </field>
+
+            <field property="news.brief" depends="required,maxlength,minlength,mask">
+
+                <msg name="required" key="err.news.brief.required"/>
+                <msg name="maxlength" key="err.news.brief.length"/>
+                <msg name="minlength" key="err.news.brief.length"/>
+                <msg name="mask" key="err.news.brief.invalid"/>
+
+                <arg name="maxlength" key="${var:minlength}" position="0" resource="false"/>
+                <arg name="maxlength" key="${var:maxlength}" position="1" resource="false"/>
+
+                <arg name="minlength" key="${var:minlength}" position="0" resource="false"/>
+                <arg name="minlength" key="${var:maxlength}" position="1" resource="false"/>
+
+                <var>
+                    <var-name>minlength</var-name>
+                    <var-value>5</var-value>
+                </var>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>500</var-value>
+                </var>
+
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>[A-zА-яЁё0-9\.\,\!\?\ \\/\(\)\+\-\*\=]</var-value>
+                </var>
+            </field>
+
+            <field property="news.content" depends="required,maxlength,minlength,mask">
+
+                <msg name="required" key="err.news.content.required"/>
+                <msg name="maxlength" key="err.news.content.length"/>
+                <msg name="minlength" key="err.news.content.length"/>
+                <msg name="mask" key="err.news.content.invalid"/>
+
+                <arg name="maxlength" key="${var:minlength}" position="0" resource="false"/>
+                <arg name="maxlength" key="${var:maxlength}" position="1" resource="false"/>
+
+                <arg name="minlength" key="${var:minlength}" position="0" resource="false"/>
+                <arg name="minlength" key="${var:maxlength}" position="1" resource="false"/>
+
+                <var>
+                    <var-name>minlength</var-name>
+                    <var-value>5</var-value>
+                </var>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>2048</var-value>
+                </var>
+
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>[A-zА-яЁё0-9\.\,\!\?\ \\/\(\)\+\-\*\=]</var-value>
+                </var>
+            </field>
+
+            <field property="news.postingDate" depends="required,mask">
+
+                <msg name="required" key="err.news.publication.date.required"/>
+                <msg name="mask" key="err.news.publication.date.invalid"/>
+
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>(19|20)\d\d[\-](0[1-9]|1[012])[\-](0[1-9]|[12][0-9]|3[01])</var-value>
+                </var>
+            </field>
+        </form>
+    </formset>
+</form-validation>

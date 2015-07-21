@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="news_management_db@localhost" uuid="cfeedaf9-546a-4550-88b6-94a2627027d4">
+    <database-info product="Oracle" version="Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production&#xa;With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options" jdbc-version="11.2" driver-name="Oracle JDBC driver" driver-version="11.2.0.3.0">
+      <extra-name-characters>$#</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="NEWS_MANAGEMENT_DB" catalog=""/>
+    <table name="NEWS" schema="NEWS_MANAGEMENT_DB" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="6" scale="0" nullable="false" jdbcType="3" version="true"/>
+      <column name="DELETED" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1" def="MCA="/>
+      <column name="TITLE" sqlType="VARCHAR2" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BRIEF" sqlType="VARCHAR2" precision="500" scale="0" nullable="false" jdbcType="12"/>
+      <column name="CONTENT" sqlType="VARCHAR2" precision="2048" scale="0" nullable="false" jdbcType="12"/>
+      <column name="POSTINGDATE" sqlType="DATE" precision="7" scale="0" nullable="false" jdbcType="93"/>
+    </table>
+    <table name="NEWS_ID_SEQ" schema="NEWS_MANAGEMENT_DB" catalog="" type="SEQUENCE"/>
+  </data-source>
+</component>

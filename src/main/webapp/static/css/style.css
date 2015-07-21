@@ -1,0 +1,84 @@
+#footer {
+    background-color: #333;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.p-center {
+    text-align: center;
+    color: lightgrey;
+}
+
+.p-left {
+    text-align: left;
+    margin: 2%;
+}
+
+.div-right-language {
+    /*border: 1px solid red;*/
+    width: 20%;
+    height: 50px;
+    float: right;
+    text-align: right;
+}
+
+.float-right {
+    float: right;
+}
+
+#news {
+    z-index: -4;
+    position: inherit;
+    margin: 1%;
+    width: 98%;
+    height: 95%;
+}
+
+.margin-1perc {
+    margin: 1%;
+}
+
+.div-left {
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 80%;
+    float: left;
+}
+
+.div-right {
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    float: right;
+}
+
+.margin-right {
+    margin-right: 1%;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+textarea {
+    width: 200px;
+    resize: none;
+}
+
+.test-block1 {
+    width: 150px;
+    height: 50px;
+    text-align:right;
+    float: right;
+}
+
+.test-block2 {
+    width: 150px;
+    height: 50px;
+    text-align:right;
+    float: right;
+}
+
